@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Sociality
  * Description:  Social features for the theme authors
- * Version:      1.3.4
+ * Version:      1.3.5
  * Author:       nK
  * Author URI:   https://nkdev.info
  * License:      GPLv2 or later
@@ -79,7 +79,6 @@ if ( ! class_exists( 'Sociality' ) ) :
         public static function instance() {
             if ( is_null( self::$instance ) ) {
                 self::$instance = new self();
-                self::$instance->init_text_domain();
                 self::$instance->init_options();
                 self::$instance->init_hooks();
 
@@ -121,6 +120,7 @@ if ( ! class_exists( 'Sociality' ) ) :
          * Init hooks.
          */
         public function init_hooks() {
+            add_action( 'init', array( $this, 'init_text_domain' ) );
             add_action( 'admin_init', array( $this, 'admin_init' ) );
             add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
         }
@@ -141,12 +141,12 @@ if ( ! class_exists( 'Sociality' ) ) :
          * Enqueue assets.
          */
         public function enqueue_assets() {
-            wp_enqueue_style( 'sociality', sociality()->plugin_url . 'assets/sociality.min.css', array(), '1.3.4' );
+            wp_enqueue_style( 'sociality', sociality()->plugin_url . 'assets/sociality.min.css', array(), '1.3.5' );
             wp_style_add_data( 'sociality', 'rtl', 'replace' );
             wp_style_add_data( 'sociality', 'suffix', '.min' );
 
-            wp_enqueue_script( 'sociality', sociality()->plugin_url . 'assets/sociality.min.js', array( 'jquery' ), '1.3.4', true );
-            wp_enqueue_script( 'sociality-share', sociality()->plugin_url . 'assets/sociality-share/sociality-share.min.js', array( 'jquery' ), '1.3.4', true );
+            wp_enqueue_script( 'sociality', sociality()->plugin_url . 'assets/sociality.min.js', array( 'jquery' ), '1.3.5', true );
+            wp_enqueue_script( 'sociality-share', sociality()->plugin_url . 'assets/sociality-share/sociality-share.min.js', array( 'jquery' ), '1.3.5', true );
 
             wp_localize_script(
                 'sociality',

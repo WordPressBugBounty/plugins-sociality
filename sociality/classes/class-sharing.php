@@ -59,10 +59,10 @@ if ( ! class_exists( 'Sociality_Sharing' ) ) :
          * Register scripts.
          */
         public function register_scripts() {
-            wp_register_style( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.css', array(), '1.3.4' );
+            wp_register_style( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.css', array(), '1.3.5' );
 
-            wp_register_script( 'qrcode', sociality()->plugin_url . 'assets/vendor/qrcode/qrcode.min.js', array( 'jquery' ), '1.3.4', false );
-            wp_register_script( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.js', array( 'jquery' ), '1.3.4', false );
+            wp_register_script( 'qrcode', sociality()->plugin_url . 'assets/vendor/qrcode/qrcode.min.js', array( 'jquery' ), '1.3.5', false );
+            wp_register_script( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.js', array( 'jquery' ), '1.3.5', false );
         }
 
         /**
