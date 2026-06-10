@@ -3,9 +3,9 @@
 * Contributors: nko
 * Tags: social, share, post author block
 * Requires at least: 5.6
-* Tested up to: 6.7
+* Tested up to: 7.0
 * Requires PHP: 7.2
-* Stable tag: 1.3.5
+* Stable tag: 1.3.6
 * License: GPLv2 or later
 * License URI: <http://www.gnu.org/licenses/gpl-2.0.html>
 
@@ -28,6 +28,11 @@ In the search field type “Sociality” and click Search Plugins. Once you’ve
 The manual installation method involves downloading our Sociality plugin and uploading it to your webserver via your favourite FTP application. The WordPress codex contains [instructions on how to do this here](https://codex.wordpress.org/Managing_Plugins#Manual_Plugin_Installation).
 
 ## Changelog
+
+= 1.3.6 =
+
+* added WordPress 7.0 compatibility
+* fixed usage of deprecated PHP and jQuery functions
 
 = 1.3.5 =
 
