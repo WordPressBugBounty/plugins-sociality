@@ -59,10 +59,10 @@ if ( ! class_exists( 'Sociality_Sharing' ) ) :
          * Register scripts.
          */
         public function register_scripts() {
-            wp_register_style( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.css', array(), '1.3.6' );
+            wp_register_style( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.css', array(), '1.3.7' );
 
-            wp_register_script( 'qrcode', sociality()->plugin_url . 'assets/vendor/qrcode/qrcode.min.js', array( 'jquery' ), '1.3.6', false );
-            wp_register_script( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.js', array( 'jquery' ), '1.3.6', false );
+            wp_register_script( 'qrcode', sociality()->plugin_url . 'assets/vendor/qrcode/qrcode.min.js', array( 'jquery' ), '1.3.7', false );
+            wp_register_script( 'sociality-share-wechat', sociality()->plugin_url . 'assets/sociality-share/sociality-share-wechat.min.js', array( 'jquery' ), '1.3.7', false );
         }
 
         /**
@@ -70,12 +70,12 @@ if ( ! class_exists( 'Sociality_Sharing' ) ) :
          */
         public function wechat_share_render() {
             // phpcs:ignore
-            if ( ! isset( $_GET['sociality_share_wechat'] ) || ! isset( $_GET['url'] ) ) {
+            if ( ! isset( $_GET['sociality_share_wechat'] ) || ! isset( $_GET['url'] ) || ! is_string( $_GET['url'] ) ) {
                 return;
             }
 
             // phpcs:ignore
-            $share_url = $_GET['url'];
+            $share_url = esc_url_raw( wp_unslash( $_GET['url'] ) );
 
             ?>
             <!DOCTYPE html>
@@ -121,7 +121,7 @@ if ( ! class_exists( 'Sociality_Sharing' ) ) :
          */
         public function sharing_custom_action() {
             $place = sociality()->settings()->get_option( 'place', 'sociality_sharing', null );
-            if ( is_array( $place ) && isset( $place['custom_action'] ) || null === $place ) {
+            if ( ( is_array( $place ) && isset( $place['custom_action'] ) ) || null === $place ) {
                 // phpcs:ignore
                 echo $this->print_sharing();
             }

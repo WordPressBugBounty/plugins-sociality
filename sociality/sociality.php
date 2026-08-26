@@ -2,7 +2,7 @@
 /**
  * Plugin Name:  Sociality
  * Description:  Social features for the theme authors
- * Version:      1.3.6
+ * Version:      1.3.7
  * Author:       nK
  * Author URI:   https://nkdev.info
  * License:      GPLv2 or later
@@ -141,12 +141,12 @@ if ( ! class_exists( 'Sociality' ) ) :
          * Enqueue assets.
          */
         public function enqueue_assets() {
-            wp_enqueue_style( 'sociality', sociality()->plugin_url . 'assets/sociality.min.css', array(), '1.3.6' );
+            wp_enqueue_style( 'sociality', sociality()->plugin_url . 'assets/sociality.min.css', array(), '1.3.7' );
             wp_style_add_data( 'sociality', 'rtl', 'replace' );
             wp_style_add_data( 'sociality', 'suffix', '.min' );
 
-            wp_enqueue_script( 'sociality', sociality()->plugin_url . 'assets/sociality.min.js', array( 'jquery' ), '1.3.6', true );
-            wp_enqueue_script( 'sociality-share', sociality()->plugin_url . 'assets/sociality-share/sociality-share.min.js', array( 'jquery' ), '1.3.6', true );
+            wp_enqueue_script( 'sociality', sociality()->plugin_url . 'assets/sociality.min.js', array( 'jquery' ), '1.3.7', true );
+            wp_enqueue_script( 'sociality-share', sociality()->plugin_url . 'assets/sociality-share/sociality-share.min.js', array( 'jquery' ), '1.3.7', true );
 
             wp_localize_script(
                 'sociality',

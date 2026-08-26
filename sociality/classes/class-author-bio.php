@@ -64,7 +64,7 @@ if ( ! class_exists( 'Sociality_Author_Bio' ) ) :
          */
         public function bio_custom_action() {
             $place = sociality()->settings()->get_option( 'place', 'sociality_author_bio', null );
-            if ( is_array( $place ) && isset( $place['custom_action'] ) || null === $place ) {
+            if ( ( is_array( $place ) && isset( $place['custom_action'] ) ) || null === $place ) {
                 // phpcs:ignore
                 echo $this->print_author_bio();
             }
@@ -120,14 +120,14 @@ if ( ! class_exists( 'Sociality_Author_Bio' ) ) :
             // css.
             wp_enqueue_style( 'bootstrap-custom', sociality()->plugin_url . 'assets/vendor/bootstrap/css/bootstrap-custom.css', array(), '3.3.7' );
             wp_enqueue_style( 'fontawesome-iconpicker', sociality()->plugin_url . 'assets/vendor/iconpicker/css/fontawesome-iconpicker.min.css', array(), '3.2.0' );
-            wp_enqueue_style( 'sociality-admin-profile', sociality()->plugin_url . 'assets/sociality-admin-profile.min.css', array(), '1.3.6' );
+            wp_enqueue_style( 'sociality-admin-profile', sociality()->plugin_url . 'assets/sociality-admin-profile.min.css', array(), '1.3.7' );
             wp_style_add_data( 'sociality-admin-profile', 'rtl', 'replace' );
             wp_style_add_data( 'sociality-admin-profile', 'suffix', '.min' );
 
             // js.
             wp_enqueue_script( 'bootstrap', sociality()->plugin_url . 'assets/vendor/bootstrap/js/bootstrap.min.js', array( 'jquery' ), '3.3.7', true );
             wp_enqueue_script( 'fontawesome-iconpicker', sociality()->plugin_url . 'assets/vendor/iconpicker/js/fontawesome-iconpicker.min.js', array( 'bootstrap' ), '3.2.0', true );
-            wp_enqueue_script( 'sociality-admin-profile', sociality()->plugin_url . 'assets/sociality-admin-profile.min.js', array( 'jquery' ), '1.3.6', true );
+            wp_enqueue_script( 'sociality-admin-profile', sociality()->plugin_url . 'assets/sociality-admin-profile.min.js', array( 'jquery' ), '1.3.7', true );
 
             wp_localize_script(
                 'sociality-admin-profile',
@@ -198,7 +198,23 @@ if ( ! class_exists( 'Sociality_Author_Bio' ) ) :
             }
 
             // phpcs:ignore
-            update_user_meta( $user_id, 'user_sociality_links', $_POST['user_sociality_links'] );
+            $raw_links = isset( $_POST['user_sociality_links'] ) ? wp_unslash( $_POST['user_sociality_links'] ) : array();
+            $links     = array();
+
+            if ( is_array( $raw_links ) ) {
+                foreach ( $raw_links as $raw_link ) {
+                    if ( ! is_array( $raw_link ) ) {
+                        continue;
+                    }
+
+                    $links[] = array(
+                        'icon' => isset( $raw_link['icon'] ) ? sanitize_text_field( $raw_link['icon'] ) : '',
+                        'url'  => isset( $raw_link['url'] ) && is_string( $raw_link['url'] ) ? esc_url_raw( $raw_link['url'] ) : '',
+                    );
+                }
+            }
+
+            update_user_meta( $user_id, 'user_sociality_links', $links );
         }
     }
 endif;
