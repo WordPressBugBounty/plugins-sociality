@@ -136,13 +136,10 @@ if ( ! class_exists( 'Sociality_Settings' ) ) :
                 'linkedin',
                 'mix',
                 'tumblr',
-                'skype',
                 'buffer',
-                'pocket',
                 'xing',
                 'reddit',
                 'flipboard',
-                'delicious',
                 'amazon',
                 'digg',
                 'evernote',
@@ -156,7 +153,6 @@ if ( ! class_exists( 'Sociality_Settings' ) ) :
                 'line',
                 'renren',
                 'weibo',
-                'tencent-weibo',
                 'wechat',
             );
 
@@ -370,12 +366,12 @@ if ( ! class_exists( 'Sociality_Settings' ) ) :
          */
         public function admin_settings_enqueue_assets() {
             // css.
-            wp_enqueue_style( 'sociality-admin-settings', sociality()->plugin_url . 'assets/sociality-admin-settings.min.css', array(), '1.3.7' );
+            wp_enqueue_style( 'sociality-admin-settings', sociality()->plugin_url . 'assets/sociality-admin-settings.min.css', array(), '1.4.0' );
             wp_style_add_data( 'sociality-admin-settings', 'rtl', 'replace' );
             wp_style_add_data( 'sociality-admin-settings', 'suffix', '.min' );
 
             // js.
-            wp_enqueue_script( 'sociality-admin-settings', sociality()->plugin_url . 'assets/sociality-admin-settings.min.js', array( 'jquery', 'jquery-ui-sortable' ), '1.3.7', true );
+            wp_enqueue_script( 'sociality-admin-settings', sociality()->plugin_url . 'assets/sociality-admin-settings.min.js', array( 'jquery', 'jquery-ui-sortable' ), '1.4.0', true );
         }
     }
 endif;

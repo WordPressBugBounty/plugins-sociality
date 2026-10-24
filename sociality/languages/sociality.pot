@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Sociality 1.3.7\n"
+"Project-Id-Version: Sociality 1.4.0\n"
 "Report-Msgid-Bugs-To: https://github.com/nk-o/sociality/issues\n"
 "Last-Translator: nK\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-26T18:35:13+00:00\n"
+"POT-Creation-Date: 2026-10-24T08:20:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: sociality\n"
@@ -30,11 +30,11 @@ msgstr ""
 msgid "https://nkdev.info"
 msgstr ""
 
-#: classes/class-author-bio.php:151
+#: classes/class-author-bio.php:150
 msgid "Social Links"
 msgstr ""
 
-#: classes/class-author-bio.php:166
+#: classes/class-author-bio.php:165
 msgid "Icon"
 msgstr ""
 
@@ -50,153 +50,153 @@ msgstr ""
 msgid "Posts Author BIO"
 msgstr ""
 
-#: classes/class-settings.php:171
+#: classes/class-settings.php:167
 msgid "To use these options you need to place actions in your theme templates.<br> See actions examples under settings on this page."
 msgstr ""
 
-#: classes/class-settings.php:176
+#: classes/class-settings.php:172
 msgid "Posts"
 msgstr ""
 
-#: classes/class-settings.php:180
-#: classes/class-settings.php:192
-#: classes/class-settings.php:204
-#: classes/class-settings.php:216
-#: classes/class-settings.php:228
-#: classes/class-settings.php:240
-#: classes/class-settings.php:252
-#: classes/class-settings.php:264
+#: classes/class-settings.php:176
+#: classes/class-settings.php:188
+#: classes/class-settings.php:200
+#: classes/class-settings.php:212
+#: classes/class-settings.php:224
+#: classes/class-settings.php:236
+#: classes/class-settings.php:248
+#: classes/class-settings.php:260
 msgid "Disabled"
 msgstr ""
 
-#: classes/class-settings.php:181
-#: classes/class-settings.php:193
-#: classes/class-settings.php:205
-#: classes/class-settings.php:217
-#: classes/class-settings.php:229
-#: classes/class-settings.php:241
-#: classes/class-settings.php:253
-#: classes/class-settings.php:265
+#: classes/class-settings.php:177
+#: classes/class-settings.php:189
+#: classes/class-settings.php:201
+#: classes/class-settings.php:213
+#: classes/class-settings.php:225
+#: classes/class-settings.php:237
+#: classes/class-settings.php:249
+#: classes/class-settings.php:261
 msgid "Heart"
 msgstr ""
 
-#: classes/class-settings.php:182
-#: classes/class-settings.php:194
-#: classes/class-settings.php:206
-#: classes/class-settings.php:218
-#: classes/class-settings.php:230
-#: classes/class-settings.php:242
-#: classes/class-settings.php:254
-#: classes/class-settings.php:266
+#: classes/class-settings.php:178
+#: classes/class-settings.php:190
+#: classes/class-settings.php:202
+#: classes/class-settings.php:214
+#: classes/class-settings.php:226
+#: classes/class-settings.php:238
+#: classes/class-settings.php:250
+#: classes/class-settings.php:262
 msgid "Thumbs Up/Down"
 msgstr ""
 
-#: classes/class-settings.php:188
+#: classes/class-settings.php:184
 msgid "Pages"
 msgstr ""
 
-#: classes/class-settings.php:200
+#: classes/class-settings.php:196
 msgid "Comments"
 msgstr ""
 
-#: classes/class-settings.php:212
+#: classes/class-settings.php:208
 msgid "WooCommerce Products"
 msgstr ""
 
-#: classes/class-settings.php:224
+#: classes/class-settings.php:220
 msgid "WooCommerce Reviews"
 msgstr ""
 
-#: classes/class-settings.php:236
+#: classes/class-settings.php:232
 msgid "bbPress Topics and Replies"
 msgstr ""
 
-#: classes/class-settings.php:248
+#: classes/class-settings.php:244
 msgid "BuddyPress"
 msgstr ""
 
-#: classes/class-settings.php:260
+#: classes/class-settings.php:256
 msgid "Custom Portfolio Type"
 msgstr ""
 
-#: classes/class-settings.php:274
-#: classes/class-settings.php:307
+#: classes/class-settings.php:270
+#: classes/class-settings.php:303
 msgid "Place"
 msgstr ""
 
-#: classes/class-settings.php:275
+#: classes/class-settings.php:271
 msgid "If you need to place sharing buttons in custom place, call <code>do_action('sociality_sharing');</code> in your plugin or theme code. Also available shortcode <code>[sociality_sharing]</code>"
 msgstr ""
 
-#: classes/class-settings.php:286
+#: classes/class-settings.php:282
 msgid "Buttons"
 msgstr ""
 
-#: classes/class-settings.php:298
+#: classes/class-settings.php:294
 msgid "Show Sharing Counters"
 msgstr ""
 
-#: classes/class-settings.php:299
-#: classes/class-settings.php:320
-#: classes/class-settings.php:327
-#: classes/class-settings.php:334
+#: classes/class-settings.php:295
+#: classes/class-settings.php:316
+#: classes/class-settings.php:323
+#: classes/class-settings.php:330
 msgid "Yes"
 msgstr ""
 
-#: classes/class-settings.php:308
+#: classes/class-settings.php:304
 msgid "If you need to place bio block in custom place, call <code>do_action('sociality_author_bio');</code> in your plugin or theme code. Also available shortcode <code>[sociality_author_bio]</code>"
 msgstr ""
 
-#: classes/class-settings.php:319
+#: classes/class-settings.php:315
 msgid "Show Avatar"
 msgstr ""
 
-#: classes/class-settings.php:326
+#: classes/class-settings.php:322
 msgid "Show Name"
 msgstr ""
 
-#: classes/class-settings.php:333
+#: classes/class-settings.php:329
 msgid "Show Biographical Info"
 msgstr ""
 
-#: classes/class-settings.php:340
+#: classes/class-settings.php:336
 msgid "Show Social Links"
 msgstr ""
 
-#: classes/class-settings.php:341
+#: classes/class-settings.php:337
 msgid "Yes. <small>[You can set social links in your profile settings page]</small>"
 msgstr ""
 
-#: classes/class-settings.php:360
+#: classes/class-settings.php:356
 msgid "Sociality Settings"
 msgstr ""
 
-#: classes/class-sharing.php:84
-#: classes/class-sharing.php:91
+#: classes/class-sharing.php:118
+#: classes/class-sharing.php:134
 msgid "Share to WeChat"
 msgstr ""
 
-#: classes/class-sharing.php:94
+#: classes/class-sharing.php:137
 msgid "This page requires JavaScript to be enabled in your browser."
 msgstr ""
 
-#: classes/class-sharing.php:98
+#: classes/class-sharing.php:141
 msgid "\"Scan QR Code\" in WeChat and tap <span class=\"sociality-share-wechat-share-how\">···</span> to share."
 msgstr ""
 
-#: classes/class-sharing.php:102
+#: classes/class-sharing.php:145
 msgid "Copy the link and open WeChat to share."
 msgstr ""
 
-#: classes/class-sharing.php:104
+#: classes/class-sharing.php:147
 msgid "Copied!"
 msgstr ""
 
-#: classes/class-sharing.php:105
+#: classes/class-sharing.php:148
 msgid "Open WeChat"
 msgstr ""
 
 #. translators: s - social brand name.
-#: templates/sharing-buttons.php:39
+#: templates/sharing-buttons.php:44
 msgid "Share page on %s"
 msgstr ""
